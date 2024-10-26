@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Interactive Form</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="/assests/logo.svg" alt="logo">
+        <ul class="menu">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <span>|</span>
+        </ul>
+        <h2 class="contactnow">CALL NOW FOR A CONSULT <span>123.456.7890</span></h2>
+    </header>
+
+    <section class="hero">
+        <img src="/assests/herobg.svg" alt="Background Image">
+        <div class="heroContainer">
+            <div class="heroTextContainer">
+                <h1><span>GET AN</span> INTERVENTION</h1>
+                <p>Supporting older adults through intergenerational initiatives and allowing them to stay active and independent as long as possible.</p>
+            </div>
+
+            <div class="heroFormContainer">
+                <div class="heroForm">
+                    <h2>Contact Us</h2>
+                    <div class="input-row">
+                        <div class="input-container error">
+                            <input type="text" id="first-name" class="input-field" placeholder=" " onblur="validateField(this)" required>
+                            <label for="first-name" class="placeholder">First Name</label>
+                            <div class="error-message">This field can't be empty.</div>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" id="last-name" class="input-field" placeholder=" " onblur="validateField(this)" required>
+                            <label for="last-name" class="placeholder">Last Name</label>
+                            <div class="error-message">This field can't be empty.</div>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-container">
+                            <input type="email" id="business-email" class="input-field" placeholder=" " onblur="validateField(this)" required>
+                            <label for="business-email" class="placeholder">Business Email</label>
+                            <div class="error-message">Please enter a valid email.</div>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" id="company" class="input-field" placeholder=" " onblur="validateField(this)" required>
+                            <label for="company" class="placeholder">Company</label>
+                            <div class="error-message">This field can't be empty.</div>
+                        </div>
+                    </div>
+                    <div class="input-container input-container-country">
+                        <select id="country" class="input-field input-field-country" required>
+                            <option value="" disabled selected>Select Country</option>
+                            <option value="US">United States</option>
+                            <option value="IN">India</option>
+                        </select>
+                        <label for="country" class="placeholder">Country</label>
+                    </div>
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
